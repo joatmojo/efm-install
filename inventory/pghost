@@ -1,0 +1,13 @@
+[all:vars]
+http_proxy=http://192.168.131.254:3128
+https_proxy=https://192.168.131.254:3128
+
+[nodeall]
+labatmo1
+labatmo2
+
+[pgnode1]
+labatmo1
+
+[pgnode2]
+labatmo2
