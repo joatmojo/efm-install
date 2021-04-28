@@ -27,16 +27,16 @@
   become: true
 
   tasks:
-    -name: copy efm.properties for node1
-      copy: 
+    - name: copy efm.properties for node1
+      copy:
         src: ./files/efm.properties.node1
         dest: /etc/edb/efm-4.1/efm.properties
         owner: efm
         group: efm
         mode: 0644  
 
-    -name: copy efm.node for node1
-      copy: 
+    - name: copy efm.node for node1
+      copy:
         src: ./files/efm.nodes-1
         dest: /etc/edb/efm-4.1/efm.nodes
         owner: efm
@@ -48,7 +48,7 @@
   become: true
 
   tasks:
-    -name: copy efm.properties for node2
+    - name: copy efm.properties for node2
       copy: 
         src: ./files/efm.properties.node2
         dest: /etc/edb/efm-4.1/efm.properties
@@ -56,7 +56,7 @@
         group: efm
         mode: 0644  
 
-    -name: copy efm.node for node2
+    - name: copy efm.node for node2
       copy: 
         src: ./files/efm.nodes-2
         dest: /etc/edb/efm-4.1/efm.nodes
