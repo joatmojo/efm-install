@@ -115,7 +115,7 @@ script.notification=
 # other nodes, and is not the same as the admin.port below, used
 # only to communicate with the local agent to send control signals.
 # For example, <provide_your_ip_address_here>:7800
-bind.address=192.168.131.201:7800
+bind.address=192.168.131.222:7800
 
 # This is the ip address/hostname to be used for communication with all
 # other Failover Manager agents. All traffic towards this address should
@@ -405,11 +405,11 @@ pgpool.enable=false
 # 'pgpool.bin' - Absolute path of pgpool bin directory
 #
 # These properties are required if 'pgpool.enable' is set to true.
-pcp.user=pcpuser
-pcp.host=192.168.131.152
-pcp.port=9898
-pcp.pass.file=/etc/pgpool-II
-pgpool.bin=/usr/bin
+pcp.user=
+pcp.host=
+pcp.port=
+pcp.pass.file=
+pgpool.bin=
 
 
 # Absolute path to load balancer scripts
