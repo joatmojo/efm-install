@@ -13,6 +13,7 @@
       yum:
         name: https://yum.enterprisedb.com/edbrepos/edb-repo-latest.noarch.rpm
         state: present
+      environment: "{{ proxy_env }}"
 
     - name: sed registered user on enterprisedb repo
       command: sed -i "s@<username>:<password>@joatmojo:cCjuDRHwokQJDU7Z@" /etc/yum.repos.d/edb.repo
@@ -20,12 +21,14 @@
     - name: install epel release latest via yum
       yum:
         name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-        state: present       
+        state: present
+      environment: "{{ proxy_env }}"   
 
     - name: install efm 4.1 via yum
       yum:
         name: edb-efm41
         state: present
+      environment: "{{ proxy_env }}"
 
 - name: Copy configuration node1
   hosts: pgnode1
