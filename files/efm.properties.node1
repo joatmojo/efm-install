@@ -37,7 +37,7 @@ db.service.name=ppas-9.3
 # /usr/edb/as11/bin. Unless the db.service.name property is used, the pg_ctl
 # command is used to start/stop/restart databases as needed after a
 # failover or switchover. This property is required.
-db.bin=/data/PostgresPlus/9.3AS/bin
+db.bin=/opt/PostgresPlus/9.3AS/bin
 
 # For database version 12 and up, this is the directory where a standby.signal
 # file will exist for a standby node. For previous versions, this is the
@@ -115,7 +115,7 @@ script.notification=
 # other nodes, and is not the same as the admin.port below, used
 # only to communicate with the local agent to send control signals.
 # For example, <provide_your_ip_address_here>:7800
-bind.address=192.168.131.201:7800
+bind.address=192.168.133.2:7800
 
 # This is the ip address/hostname to be used for communication with all
 # other Failover Manager agents. All traffic towards this address should
@@ -204,7 +204,7 @@ update.physical.slots.period=0
 # layer of information should the EFM nodes lose sight of each other.
 #
 # The installation default is Google's DNS server.
-ping.server.ip=192.168.131.1
+ping.server.ip=192.168.133.1
 
 # This command will be used to test the reachability of certain nodes.
 #
