@@ -115,7 +115,7 @@ script.notification=
 # other nodes, and is not the same as the admin.port below, used
 # only to communicate with the local agent to send control signals.
 # For example, <provide_your_ip_address_here>:7800
-bind.address=192.168.131.222:7800
+bind.address=192.168.133.8:7800
 
 # This is the ip address/hostname to be used for communication with all
 # other Failover Manager agents. All traffic towards this address should
@@ -204,7 +204,7 @@ update.physical.slots.period=0
 # layer of information should the EFM nodes lose sight of each other.
 #
 # The installation default is Google's DNS server.
-ping.server.ip=192.168.131.1
+ping.server.ip=192.168.133.1
 
 # This command will be used to test the reachability of certain nodes.
 #
