@@ -3,6 +3,8 @@
   hosts: nodeall
   become: true
 
+  gather_facts: no
+
   vars:
     proxy_env:
       http_proxy: "{{ http_proxy }}"
@@ -34,6 +36,8 @@
   hosts: pgnode1
   become: true
 
+  gather_facts: no
+
   tasks:
     - name: copy efm.properties for node1
       copy:
@@ -55,6 +59,8 @@
   hosts: pgnode2
   become: true
 
+  gather_facts: no
+
   tasks:
     - name: copy efm.properties for node2
       copy: 
@@ -75,6 +81,8 @@
 - name: Restart efm service and check efm cluster status
   hosts: nodeall
   become: true
+
+  gather_facts: no
   
   tasks:
     - name: restart efm service
